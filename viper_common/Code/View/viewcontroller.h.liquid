@@ -1,0 +1,18 @@
+{% include 'header' %}
+
+#import <UIKit/UIKit.h>
+
+#import "{{ prefix }}{{ module_info.name }}ViewInput.h"
+#import "{{ prefix }}{{ module_info.name }}ModuleInputHolder.h"
+#import "{{ prefix }}{{ module_info.name }}ViewOutput.h"
+
+@interface {{ prefix }}{{ module_info.name }}ViewController : UIViewController 
+<
+    {{ prefix }}{{ module_info.name }}ViewInput,
+    {{ prefix }}{{ module_info.name }}ModuleInputHolder
+>
+
+@property (strong, nonatomic, readwrite) id<{{ prefix }}{{ module_info.name }}ViewOutput> output;
+@property (weak, nonatomic, readwrite) id<{{ prefix }}{{ module_info.name }}ModuleInput> moduleInput;
+
+@end

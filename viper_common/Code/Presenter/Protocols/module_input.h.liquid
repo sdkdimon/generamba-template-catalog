@@ -1,0 +1,12 @@
+{% include 'header' %}
+
+#import <Foundation/Foundation.h>
+
+@protocol {{ prefix }}{{ module_info.name }}ModuleOutput;
+
+@protocol {{ prefix }}{{ module_info.name }}ModuleInput <NSObject>
+
+- (void)setModuleOutput:(id<{{ prefix }}{{ module_info.name }}ModuleOutput>)moduleOutput;
+- (void)configureModule;
+
+@end

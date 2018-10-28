@@ -1,0 +1,11 @@
+{% include 'header' %}
+
+#import <Foundation/Foundation.h>
+
+@protocol {{ prefix }}{{ module_info.name }}ModuleInput;
+
+@protocol {{ prefix }}{{ module_info.name }}ModuleInputHolder <NSObject>
+
+@property (weak, nonatomic, readwrite) id<{{ prefix }}{{ module_info.name }}ModuleInput> moduleInput;
+
+@end
